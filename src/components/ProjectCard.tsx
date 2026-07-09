@@ -3,6 +3,7 @@ import nextLogo from "@/assets/next.webp";
 import dockerLogo from "@/assets/docker.webp";
 import postgresLogo from "@/assets/postgres.webp";
 import supabaseLogo from "@/assets/supabase.webp";
+import nodeLogo from "@/assets/node.webp";
 import StatusPill from "@components/StatusPill";
 
 interface props {
@@ -15,7 +16,7 @@ export default function ProjectCard({ project }: props) {
       title: "Crosby Snacks",
       description:
         "An app built for a family game where we rate snacks from around the world!",
-      tech: ["react", "next", "supabase", "postgres"],
+      tech: ["react", "node", "next", "supabase", "postgres"],
       live: true,
       liveLink: "https://crosby-snacks-e5op.vercel.app/",
       infoLink: "/crosby-snacks",
@@ -25,7 +26,7 @@ export default function ProjectCard({ project }: props) {
       title: "Strava Stats",
       description:
         "A dashboard extracting the main information from my Strava runs.",
-      tech: ["react", "docker", "postgres"],
+      tech: ["react", "node", "docker", "postgres"],
       live: true,
       liveLink: "https://d1oaiop4g3fnqn.cloudfront.net/",
       infoLink: "/strava-stats",
@@ -40,6 +41,7 @@ export default function ProjectCard({ project }: props) {
     supabase: supabaseLogo,
     postgres: postgresLogo,
     docker: dockerLogo,
+    node: nodeLogo,
   };
 
   return (

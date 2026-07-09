@@ -1,23 +1,21 @@
 import ImageCarousel from "@components/ImageCarousel";
 import reactLogo from "@/assets/react.webp";
-import nextLogo from "@/assets/next.webp";
 import postgresLogo from "@/assets/postgres.webp";
-import supabaseLogo from "@/assets/supabase.webp";
+import dockerLogo from "@/assets/docker.webp";
 import nodeLogo from "@/assets/node.webp";
-import drizzleLogo from "@/assets/drizzle.webp";
-import vercelLogo from "@/assets/vercel.webp";
+import prismaLogo from "@/assets/prisma.webp";
 
 export default function () {
   return (
     <>
       <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-pretty md:text-6xl">
-        Crosby Snacks
+        Strava Stats
       </h1>
       <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-        A full-stack snack rating app built to explore authentication, protected
-        features, image uploads, and leaderboard logic. The project focused on
-        building a reliable user experience around voting, ranking, and content
-        moderation.
+        A full-stack app built around Strava data and backend reliability. The
+        focus here was on server-side development, AWS deployment, CI/CD
+        workflows, and integrating a third-party API using JWT-based
+        authentication.
       </p>
 
       <section className="my-10">
@@ -36,16 +34,10 @@ export default function () {
                 src={reactLogo}
                 alt="React logo"
               />
-              <img
-                className="h-8 w-8 rounded"
-                src={nextLogo}
-                alt="Next.js logo"
-              />
             </div>
             <h3 className="mb-1 font-semibold">Frontend</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              React with Next.js App Router for the user interface and
-              client-side experience.
+              React with Vite for the user interface and client-side experience.
             </p>
           </div>
 
@@ -58,23 +50,18 @@ export default function () {
               />
               <img
                 className="h-8 w-8 rounded"
-                src={drizzleLogo}
-                alt="Drizzle ORM logo"
+                src={prismaLogo}
+                alt="Prisma ORM logo"
               />
             </div>
             <h3 className="mb-1 font-semibold">API</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Node.js with Drizzle ORM for structured data access and API logic.
+              Node.js with Prisma ORM for structured data access and API logic.
             </p>
           </div>
 
           <div className="pt-2">
             <div className="mb-3 flex items-center gap-3">
-              <img
-                className="h-8 w-8 rounded"
-                src={supabaseLogo}
-                alt="Supabase logo"
-              />
               <img
                 className="h-8 w-8 rounded"
                 src={postgresLogo}
@@ -92,13 +79,14 @@ export default function () {
             <div className="mb-3 flex items-center gap-3">
               <img
                 className="h-8 w-8 rounded-full"
-                src={vercelLogo}
-                alt="Vercel logo"
+                src={dockerLogo}
+                alt="Docker logo"
               />
             </div>
             <h3 className="mb-1 font-semibold">Deployment</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Vercel for fast, reliable hosting and deployment.
+              Dockerised the application and deployed the frontend to AWS S3,
+              with the Node.js API hosted on an AWS EC2 instance.
             </p>
           </div>
         </div>
@@ -124,37 +112,34 @@ export default function () {
 
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <h3 className="mb-2 font-semibold">
-              Authentication & access control
-            </h3>
+            <h3 className="mb-2 font-semibold">Backend-first architecture</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Implemented protected routes and permission-aware UI so only
-              authorised users could access voting, uploads, and restricted
-              content.
+              Built the application around reliable backend services, API
+              orchestration, and data processing rather than UI-heavy features.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <h3 className="mb-2 font-semibold">Single-vote enforcement</h3>
+            <h3 className="mb-2 font-semibold">AWS deployment</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Built logic to prevent duplicate submissions and maintain fair,
-              reliable ranking results.
+              Deployed the app on AWS and focused on scalability, reliability,
+              and infrastructure decisions that supported long-term growth.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <h3 className="mb-2 font-semibold">Media upload flow</h3>
+            <h3 className="mb-2 font-semibold">CI/CD workflows</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Added image upload support with validation and storage handling to
-              keep the experience simple and robust.
+              Implemented automated deployment workflows to streamline releases
+              and reduce manual operational overhead.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <h3 className="mb-2 font-semibold">Leaderboard & ranking system</h3>
+            <h3 className="mb-2 font-semibold">Third-party API integration</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Designed the data model and scoring flow to surface rankings
-              clearly and keep the leaderboard accurate over time.
+              Integrated Strava via JWT-authenticated requests and handled
+              external API interactions in a robust, production-minded way.
             </p>
           </div>
         </div>
