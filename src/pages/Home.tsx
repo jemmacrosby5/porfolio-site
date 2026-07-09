@@ -1,3 +1,5 @@
+import ProjectCard from "@components/ProjectCard";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-start">
@@ -14,13 +16,19 @@ export default function Home() {
       </p>
 
       <div className="flex gap-4 my-2">
-        <button className="font-mono bg-gray-200 py-2 px-4 rounded-2xl">
+        <a
+          href="https://github.com/jemmacrosby5"
+          className="font-mono bg-gray-200 py-2 px-4 rounded-2xl cursor-pointer"
+        >
           GitHub
-        </button>
+        </a>
 
-        <button className="font-mono bg-gray-200 py-2 px-4 rounded-2xl">
+        <a
+          href="https://www.linkedin.com/in/jemma-crosby/"
+          className="font-mono bg-gray-200 py-2 px-4 rounded-2xl cursor-pointer"
+        >
           LinkedIn
-        </button>
+        </a>
       </div>
 
       {/* Projects */}
@@ -31,65 +39,9 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex gap-4">
-        {/* Crosby Snacks */}
-        <div className="rounded-lg border border-gray-400 p-4 flex flex-col gap-4">
-          <h3 className="text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
-            Crosby Snacks
-          </h3>
-          <p>
-            An app built for a family game where we rate snacks from around the
-            world!
-          </p>
-          <div className="flex gap-4">
-            <a
-              className="bg-black text-white py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              Visit site
-            </a>
-            <a
-              className="bg-gray-200 py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              Learn more
-            </a>
-            <a
-              className="border border-gray-400 py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              View code
-            </a>
-          </div>
-        </div>
-
-        {/* Running App */}
-        <div className="rounded-lg border border-gray-400 p-4 flex flex-col gap-4">
-          <h3 className="text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
-            Strava Stats Dashboard
-          </h3>
-          <p>A dashboard to represent my running.</p>
-          <div className="flex gap-4">
-            <a
-              className="bg-black text-white py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              Visit site
-            </a>
-            <a
-              className="bg-gray-200 py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              Learn more
-            </a>
-            <a
-              className="border border-gray-400 py-2 px-4 rounded-lg font-mono"
-              href="https://crosby-snacks-e5op.vercel.app/"
-            >
-              View code
-            </a>
-          </div>
-        </div>
+      <div className="flex w-full gap-4 md:flex-row flex-col">
+        <ProjectCard project="crosbySnacks" />
+        <ProjectCard project="stravaStats" />
       </div>
     </div>
   );

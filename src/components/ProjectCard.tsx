@@ -1,0 +1,85 @@
+import reactLogo from "@/assets/react.webp";
+import nextLogo from "@/assets/next.webp";
+import dockerLogo from "@/assets/docker.webp";
+import postgresLogo from "@/assets/postgres.webp";
+import supabaseLogo from "@/assets/supabase.webp";
+import StatusPill from "@components/StatusPill";
+
+interface props {
+  project: "crosbySnacks" | "stravaStats";
+}
+
+export default function ProjectCard({ project }: props) {
+  const projectDetails = {
+    crosbySnacks: {
+      title: "Crosby Snacks",
+      description:
+        "An app built for a family game where we rate snacks from around the world!",
+      tech: ["react", "next", "supabase", "postgres"],
+      live: true,
+      liveLink: "https://crosby-snacks-e5op.vercel.app/",
+      infoLink: "/crosby-snacks",
+      githubLink: "https://github.com/jemmacrosby5/crosby-snacks",
+    },
+    stravaStats: {
+      title: "Strava Stats",
+      description: "A dashboard extracting the main information from Strava",
+      tech: ["react", "docker", "postgres"],
+      live: true,
+      liveLink: "https://d1oaiop4g3fnqn.cloudfront.net/",
+      infoLink: "/strava-stats",
+      githubLink: "https://github.com/jemmacrosby5/strava-stats-backend",
+    },
+  };
+
+  const details = projectDetails[project];
+  const techLogos = {
+    react: reactLogo,
+    next: nextLogo,
+    supabase: supabaseLogo,
+    postgres: postgresLogo,
+    docker: dockerLogo,
+  };
+
+  return (
+    <div className="flex flex-col gap-4 w-full rounded-lg border border-gray-400 p-4">
+      <div className="flex justify-between">
+        <h3 className="text-pretty text-2xl font-semibold leading-tight tracking-tight md:text-xl">
+          {details.title}
+        </h3>
+        <StatusPill live={details.live} />
+      </div>
+      <div className="flex gap-2">
+        {details.tech.map((tech) => (
+          <img
+            key={tech}
+            className="w-6 rounded"
+            src={techLogos[tech as keyof typeof techLogos]}
+            alt={`${tech} logo`}
+          />
+        ))}
+      </div>
+      <p>{details.description}</p>
+      <div className="flex gap-4">
+        <a
+          className="rounded-lg bg-black px-4 py-2 font-mono text-white"
+          href={details.liveLink}
+        >
+          Visit site
+        </a>
+        <a
+          className="rounded-lg bg-gray-200 px-4 py-2 font-mono"
+          href={details.infoLink}
+        >
+          Learn more
+        </a>
+        <a
+          className="rounded-lg border border-gray-400 px-4 py-2 font-mono"
+          href={details.githubLink}
+        >
+          View code
+        </a>
+      </div>
+    </div>
+  );
+}
