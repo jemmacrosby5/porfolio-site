@@ -23,7 +23,8 @@ export default function ProjectCard({ project }: props) {
     },
     stravaStats: {
       title: "Strava Stats",
-      description: "A dashboard extracting the main information from Strava",
+      description:
+        "A dashboard extracting the main information from my Strava runs.",
       tech: ["react", "docker", "postgres"],
       live: true,
       liveLink: "https://d1oaiop4g3fnqn.cloudfront.net/",
@@ -62,19 +63,19 @@ export default function ProjectCard({ project }: props) {
       <p>{details.description}</p>
       <div className="flex gap-4">
         <a
-          className="rounded-lg bg-black px-4 py-2 font-mono text-white"
+          className="rounded-lg bg-black px-4 py-2 font-mono text-white text-center"
           href={details.liveLink}
         >
           Visit site
         </a>
         <a
-          className="rounded-lg bg-gray-200 px-4 py-2 font-mono"
+          className="rounded-lg bg-gray-200 px-4 py-2 font-mono text-center"
           href={details.infoLink}
         >
           Learn more
         </a>
         <a
-          className="rounded-lg border border-gray-400 px-4 py-2 font-mono"
+          className="rounded-lg border border-gray-400 px-4 py-2 font-mono text-center"
           href={details.githubLink}
         >
           View code

@@ -1,8 +1,9 @@
 import ProjectCard from "@components/ProjectCard";
+import SkillsMatrix from "@components/SkillsMatrix";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex w-full flex-col items-start">
       {/* Intro */}
       <p className="font-mono">SOFTWARE ENGINEER</p>
       <h1 className="max-w-3xl text-4xl font-semibold md:text-6xl text-pretty mt-5 leading-tight tracking-tight">
@@ -32,17 +33,41 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <div className="flex items-center mt-5 gap-4 border-b border-gray-200 w-full pb-4 mb-4">
-        <p className="font-mono">01</p>
-        <h2 className="max-w-3xl text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
-          Projects
-        </h2>
-      </div>
+      <section className="my-5 w-full">
+        <div className="flex items-center gap-4 border-b border-gray-200 w-full pb-4 mb-4">
+          <p className="font-mono">01</p>
+          <h2 className="max-w-3xl text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
+            Projects
+          </h2>
+        </div>
 
-      <div className="flex w-full gap-4 md:flex-row flex-col">
-        <ProjectCard project="crosbySnacks" />
-        <ProjectCard project="stravaStats" />
-      </div>
+        <div className="flex w-full gap-4 md:flex-row flex-col">
+          <ProjectCard project="crosbySnacks" />
+          <ProjectCard project="stravaStats" />
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="my-5 w-full">
+        <div className="flex items-center my-5 gap-4 border-b border-gray-200 w-full pb-4 mb-4">
+          <p className="font-mono">02</p>
+          <h2 className="max-w-3xl text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
+            Skills
+          </h2>
+        </div>
+
+        <div className="mt-5 w-full">
+          <SkillsMatrix
+            skills={[
+              { name: "React", level: 4 },
+              { name: "TypeScript", level: 5 },
+              { name: "Vue", level: 4 },
+              { name: "Node.js", level: 3 },
+              { name: "PostgreSQL", level: 2 },
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }
