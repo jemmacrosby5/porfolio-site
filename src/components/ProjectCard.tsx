@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: props) {
   };
 
   return (
-    <div className="flex flex-col gap-4 w-full rounded-lg border border-gray-400 p-4">
+    <div className="flex flex-col gap-4 w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <div className="flex justify-between">
         <h3 className="text-pretty text-2xl font-semibold leading-tight tracking-tight md:text-xl">
           {details.title}
