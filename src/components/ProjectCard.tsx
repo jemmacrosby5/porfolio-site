@@ -18,6 +18,7 @@ export default function ProjectCard({ project }: props) {
         "An app built for a family game where we rate snacks from around the world!",
       tech: ["react", "node", "next", "supabase", "postgres"],
       live: true,
+      wip: false,
       liveLink: "https://crosby-snacks-e5op.vercel.app/",
       infoLink: "/crosby-snacks",
       githubLink: "https://github.com/jemmacrosby5/crosby-snacks",
@@ -28,6 +29,7 @@ export default function ProjectCard({ project }: props) {
         "A dashboard extracting the main information from my Strava runs.",
       tech: ["react", "node", "docker", "postgres"],
       live: true,
+      wip: true,
       liveLink: "https://d1oaiop4g3fnqn.cloudfront.net/",
       infoLink: "/strava-stats",
       githubLink: "https://github.com/jemmacrosby5/strava-stats-backend",
@@ -46,11 +48,11 @@ export default function ProjectCard({ project }: props) {
 
   return (
     <div className="flex flex-col gap-4 w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-      <div className="flex justify-between">
-        <h3 className="text-pretty text-2xl font-semibold leading-tight tracking-tight md:text-xl">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="whitespace-nowrap text-2xl font-semibold leading-tight tracking-tight md:text-xl">
           {details.title}
         </h3>
-        <StatusPill live={details.live} />
+        <StatusPill live={details.live} wip={details.wip} />
       </div>
       <div className="flex gap-2">
         {details.tech.map((tech) => (

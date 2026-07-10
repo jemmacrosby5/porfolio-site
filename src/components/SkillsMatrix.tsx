@@ -1,34 +1,47 @@
-type Skill = {
-  name: string;
-  level: 1 | 2 | 3 | 4 | 5;
-};
+export default function SkillsMatrix() {
+  const experiencedSkills = [
+    "React",
+    "Vue",
+    "TypeScript",
+    "Astro",
+    "Cypress",
+    "Vitest",
+    "CI/CD (GitHub Actions)",
+  ];
 
-type SkillsMatrixProps = {
-  skills: Skill[];
-};
+  const growingSkills = [
+    "Next",
+    "Node",
+    "AWS (S3, Lambda, Kinesis, RDS, EC2)",
+    "PostgreSQL",
+    "Docker",
+  ];
 
-export default function SkillsMatrix({ skills }: SkillsMatrixProps) {
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {skills.map((skill) => (
-        <div key={skill.name} className="rounded-xl border border-gray-200 p-4">
-          <div className="mb-2 flex items-center justify-between">
-            <span className="font-medium">{skill.name}</span>
-          </div>
-          <div className="flex gap-1">
-            {Array.from({ length: 5 }).map((_, index) => {
-              const isFilled = index < skill.level;
-
-              return (
-                <div
-                  key={`${skill.name}-${index}`}
-                  className={`h-2 flex-1 rounded-full ${isFilled ? "bg-green-500" : "bg-gray-100"}`}
-                />
-              );
-            })}
-          </div>
+      <div className="mt-5 w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
+          Experienced in:
+        </p>
+        <div>
+          {experiencedSkills.map((skill) => (
+            <p key={skill} className="mb-2 font-mono">
+              {skill}
+            </p>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div className="mt-5 w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
+          Familiar with and currently expanding my knowledge in:
+        </p>
+        {growingSkills.map((skill) => (
+          <p key={skill} className="mb-2 font-mono">
+            {skill}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

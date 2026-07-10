@@ -1,4 +1,4 @@
-import ImageCarousel from "@components/ImageCarousel";
+import awsLogo from "@/assets/aws.webp";
 import reactLogo from "@/assets/react.webp";
 import postgresLogo from "@/assets/postgres.webp";
 import dockerLogo from "@/assets/docker.webp";
@@ -82,6 +82,11 @@ export default function () {
                 src={dockerLogo}
                 alt="Docker logo"
               />
+              <img
+                className="h-8 w-8 rounded-full object-cover"
+                src={awsLogo}
+                alt="AWS logo"
+              />
             </div>
             <h3 className="mb-1 font-semibold">Deployment</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -93,13 +98,22 @@ export default function () {
       </section>
 
       <section className="my-10">
-        <div className="flex items-center gap-4 border-b border-gray-200 w-full pb-4 mb-4">
+        <div className="mb-4 flex w-full items-center gap-4 border-b border-gray-200 pb-4">
           <p className="font-mono">02</p>
-          <h2 className="max-w-3xl text-2xl font-semibold md:text-xl text-pretty leading-tight tracking-tight">
+          <h2 className="max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-pretty md:text-xl">
             Images
           </h2>
         </div>
-        <ImageCarousel />
+
+        <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center shadow-sm">
+          <p className="text-4xl">🚧</p>
+          <p className="mt-3 text-lg font-medium text-gray-800">
+            Work in progress
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Coming soon!
+          </p>
+        </div>
       </section>
 
       <section className="my-5 w-full">
@@ -114,13 +128,15 @@ export default function () {
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
             <h3 className="mb-2 font-semibold">Backend-first architecture</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Built the application around reliable backend services, API
-              orchestration, and data processing rather than UI-heavy features.
+              I wanted to apply and deepen my backend skills in this project, so
+              I focused on CI/CD deployments, third-party API integrations, and
+              building a robust API. As a result, the frontend is intentionally
+              kept fairly simple and dashboard-focused.
             </p>
           </div>
 
           <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <h3 className="mb-2 font-semibold">AWS deployment</h3>
+            <h3 className="mb-2 font-semibold">AWS deployments</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Deployed the app on AWS and focused on scalability, reliability,
               and infrastructure decisions that supported long-term growth.

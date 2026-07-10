@@ -57,15 +57,7 @@ export default function Home() {
         </div>
 
         <div className="mt-5 w-full">
-          <SkillsMatrix
-            skills={[
-              { name: "React", level: 4 },
-              { name: "TypeScript", level: 5 },
-              { name: "Vue", level: 4 },
-              { name: "Node.js", level: 3 },
-              { name: "PostgreSQL", level: 2 },
-            ]}
-          />
+          <SkillsMatrix />
         </div>
       </section>
 
@@ -79,9 +71,9 @@ export default function Home() {
 
         <div className="mt-5 w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <p className="">
-            Thanks for taking the time to have a look at my projects! <br /> I
-            have 3 years of experience working on ecommerce sites used by
-            hundreds of thousands of users each day. Here my focus was on:
+            Thanks for taking the time to have a look at my projects! <br />
+            <br /> I have 3 years of experience working on ecommerce sites used
+            by hundreds of thousands of users each day. Here my focus was on:
           </p>
 
           <ul className="mt-6 space-y-3">
@@ -140,7 +132,7 @@ export default function Home() {
             I’m currently looking for my next development role, I thoroughly
             enjoy varied, fast-paced work and love learning new languages, tools
             and frameworks.
-            <br /> Please drop me a message on{" "}
+            <br /> <br /> Please drop me a message on{" "}
             <a
               className="underline"
               href="https://www.linkedin.com/in/jemma-crosby/"
