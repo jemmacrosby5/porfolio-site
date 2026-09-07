@@ -9,7 +9,7 @@ import StravaStats from "@pages/about-pages/StravaStats";
 function App() {
   return (
     <>
-      <header className="border-b">
+      <header>
         <Navbar />
       </header>
 

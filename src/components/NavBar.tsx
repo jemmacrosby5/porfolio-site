@@ -5,6 +5,7 @@ export default function Navbar() {
   const [projectsOpen, setProjectsOpen] = useState(false);
 
   return (
+    <>
     <nav className="font-mono mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
       <h1>jemma.crosby</h1>
 
@@ -41,5 +42,7 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    <div aria-hidden="true" className="zap-divider"></div>
+    </>
   );
 }

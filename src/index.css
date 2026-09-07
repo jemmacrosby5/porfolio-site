@@ -5,3 +5,87 @@
   --font-sans: "Geist", sans-serif;
   --font-mono: "Geist Mono", monospace;
 }
+
+.zap-divider {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  background: #374151;
+}
+
+.zap-divider::after {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -35%;
+  width: 30%;
+  content: "";
+  background: linear-gradient(90deg, transparent, #33aaff 50%, transparent);
+  filter: blur(1px);
+  animation: zap-streak 5.6s linear infinite;
+}
+
+@keyframes zap-streak {
+  0%,
+  7% {
+    left: -35%;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, #33aaff 50%, transparent);
+  }
+  12% {
+    left: -35%;
+    opacity: 1;
+  }
+  25% {
+    left: 100%;
+    opacity: 1;
+  }
+  30%,
+  33% {
+    left: 100%;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, #ff3366 50%, transparent);
+  }
+  38% {
+    left: -35%;
+    opacity: 0;
+  }
+  42% {
+    left: -35%;
+    opacity: 1;
+  }
+  55% {
+    left: 100%;
+    opacity: 1;
+  }
+  63%,
+  66% {
+    left: 100%;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, #33dd77 50%, transparent);
+  }
+  71% {
+    left: -35%;
+    opacity: 0;
+  }
+  75% {
+    left: -35%;
+    opacity: 1;
+  }
+  88% {
+    left: 100%;
+    opacity: 1;
+  }
+  95%,
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zap-divider,
+  .zap-divider::after {
+    animation: none;
+  }
+}
