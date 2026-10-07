@@ -22,7 +22,7 @@ export default function Navbar() {
           </button>
 
           {projectsOpen && (
-            <div className="absolute right-0 mt-2 flex w-40 flex-col rounded-lg border border-gray-300 bg-white p-2 shadow-md">
+            <div className="absolute right-0 mt-3 flex w-40 flex-col rounded-lg border border-gray-300 bg-white p-2 shadow-md">
               <NavLink
                 to="/crosby-snacks"
                 onClick={() => setProjectsOpen(false)}
